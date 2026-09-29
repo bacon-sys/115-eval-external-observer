@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>外部觀察與學術研究｜宜蘭縣立大同國民中學</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#241C18; --ink-soft:#4A3C33;
+  --paper:#F7F2E8; --paper-2:#EFE6D5; --card:#FFFFFF;
+  --red:#A3231F; --red-2:#C9563F;
+  --olive:#6B6A45; --sand:#C2A878; --grey:#7A6E63; --line:#D6C8AE;
+  font-size:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--paper); color:var(--ink);
+  font-family:"Noto Sans TC",system-ui,-apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;
+  font-size:1rem; line-height:1.9; -webkit-text-size-adjust:100%;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 1.4rem}
+
+header{background:var(--ink);color:var(--paper);padding:2.6rem 0 0}
+.eyebrow{font-size:.95rem;letter-spacing:.14em;color:var(--sand);margin-bottom:.5rem}
+header h1{font-size:2.35rem;font-weight:900;line-height:1.3;margin-bottom:.6rem;letter-spacing:.02em}
+header .sub{font-size:1.02rem;color:#D8CCB8;margin-bottom:2rem}
+.weavebar{
+  height:22px;
+  background:
+    repeating-linear-gradient(135deg, var(--red) 0 11px, transparent 11px 22px),
+    repeating-linear-gradient(45deg, var(--red) 0 11px, var(--paper) 11px 22px);
+  background-color:var(--paper);
+}
+
+section{padding:3rem 0 .6rem}
+section + section{border-top:1px solid var(--line)}
+h2{font-size:1.55rem;font-weight:700;margin-bottom:.4rem;line-height:1.4}
+h2 .num{color:var(--red);font-weight:900;margin-right:.5rem}
+.lede{font-size:1rem;color:var(--ink-soft);margin-bottom:1.6rem}
+
+/* 來源說明 */
+.source{background:var(--paper-2);border-left:5px solid var(--sand);padding:1.3rem 1.5rem;margin:1.4rem 0 0}
+.source h3{font-size:1.1rem;margin-bottom:.6rem}
+.source dl{display:grid;grid-template-columns:8.5rem 1fr;gap:.35rem 1rem;font-size:.97rem}
+.source dt{color:var(--grey)}
+.source dd{color:var(--ink-soft)}
+
+/* 篩選 */
+.filters{margin:1.2rem 0 .4rem}
+.filters > span{display:block;font-size:.9rem;color:var(--grey);margin-bottom:.4rem}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem}
+.chip{font:inherit;font-size:.95rem;padding:.3rem .85rem;cursor:pointer;
+  background:transparent;border:1px solid var(--line);color:var(--ink-soft);border-radius:2px}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.chip:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.count{font-size:.95rem;color:var(--grey);margin-top:.5rem}
+
+/* 發現卡 */
+.find{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--olive);
+  padding:1.3rem 1.5rem;margin-bottom:1.1rem}
+.find.t-interview{border-top-color:var(--sand)}
+.find.t-student{border-top-color:var(--red-2)}
+.find h3{font-size:1.15rem;line-height:1.55;margin-bottom:.7rem}
+.kicker{font-size:.88rem;font-weight:700;letter-spacing:.06em;margin-bottom:.3rem;color:var(--olive)}
+.t-interview .kicker{color:#8A6B36}
+.t-student .kicker{color:var(--red-2)}
+.find.t-thesis{border-top-color:var(--red)}
+.t-thesis .kicker{color:var(--red)}
+.empty{color:var(--grey);font-size:.97rem;padding:.6rem 0;display:none}
+.srcnote{font-size:.9rem;color:var(--grey);margin-top:.7rem;padding-top:.6rem;border-top:1px dashed var(--line)}
+.find ul{padding-left:1.25rem;margin-bottom:.4rem}
+.find li{margin-bottom:.4rem;font-size:.99rem;color:var(--ink-soft)}
+.tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.9rem;padding-top:.8rem;border-top:1px dashed var(--line)}
+.tag{display:inline-block;font-size:.85rem;padding:.1rem .6rem;border:1px solid var(--line);
+  color:var(--ink-soft);border-radius:2px;white-space:nowrap}
+.tag b{color:var(--red)}
+blockquote{border-left:3px solid var(--sand);padding:.2rem 0 .2rem 1rem;margin:.7rem 0;
+  color:var(--ink-soft);font-size:.99rem}
+blockquote p{margin-bottom:.3rem}
+.attrib{font-size:.88rem;color:var(--grey)}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:.8rem 0 .3rem}
+.split > div{background:var(--paper-2);padding:.9rem 1.1rem}
+.split h4{font-size:1rem;margin-bottom:.4rem;color:var(--ink)}
+.split ul{padding-left:1.15rem}
+.split li{font-size:.95rem;margin-bottom:.25rem}
+
+.notes{background:var(--paper-2);padding:1.4rem 1.6rem;margin-top:1.2rem;border-top:3px solid var(--sand)}
+.notes h3{font-size:1.1rem;margin-bottom:.7rem}
+.notes ul{padding-left:1.3rem}
+.notes li{margin-bottom:.6rem;font-size:.97rem;color:var(--ink-soft)}
+
+footer{background:var(--ink);color:#C0B4A3;font-size:.92rem;padding:1.8rem 0;margin-top:3rem}
+
+@media (max-width:760px){
+  header h1{font-size:1.8rem}
+  .source dl{grid-template-columns:1fr;gap:0 0}
+  .source dt{margin-top:.5rem}
+  .split{grid-template-columns:1fr}
+}
+@media print{
+  body{background:#fff;color:#000;font-size:11pt}
+  .find,.tag,.source,.notes,thead th{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  header{background:#fff;color:#000;padding-top:0}
+  header .sub{color:#333} .eyebrow{color:#666}
+  .weavebar,.filters,footer{display:none}
+  section{page-break-inside:avoid;padding:1.1rem 0}
+  .find{page-break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <p class="eyebrow">宜蘭縣立大同國民中學　115 學年度實驗教育評鑑　外部觀察佐證</p>
+    <h1>外部觀察與學術研究</h1>
+    <p class="sub">本頁彙整兩份由校外研究者獨立完成、與本校評鑑指標相關之觀察紀錄：一為 114 學年度之觀課與訪談報告，一為 2024 年完成之人類學碩士論文。兩者均非本校自行撰寫，正向觀察與所指出之限制均予呈現。</p>
+  </div>
+  <div class="weavebar" aria-hidden="true"></div>
+</header>
+
+<main class="wrap">
+
+<section>
+  <h2><span class="num">一</span>資料來源與性質</h2>
+  <p class="lede">本頁所有內容均來自外部研究者之獨立觀察與紀錄，非本校自行撰寫。兩份資料的性質、規模與份量並不相同，說明如下，俾利檢視者自行判斷。</p>
+
+  <div class="source">
+    <h3>來源一｜觀課與訪談報告（114 學年度）</h3>
+    <dl>
+      <dt>研究者身分</dt><dd>國立臺北教育大學教育創新與評鑑碩士班研究生（經同意後引用）</dd>
+      <dt>資料性質</dt><dd>研究所「實驗教育探究與實作」課程之期末報告二份，非正式發表之學術研究</dd>
+      <dt>觀課場次</dt><dd>114 學年度上學期共 4 場：山林智慧－陷阱實作、燒墾生活與技能－工寮搭建、gaga 家庭與編織－認識傳統地機、全校共同預備 magu byaling</dd>
+      <dt>訪談對象</dt><dd>文化課程教師 3 位、教務主任 1 位</dd>
+      <dt>學生活動</dt><dd>114 學年度下學期共 3 場，參與學生 9 位；內容為信任建立、生命之河、認同主題討論</dd>
+      <dt>取樣限制</dt><dd>觀課場次與參與人數有限，研究者本人亦於報告中說明單一學期之觀課難以完整回答其探究問題</dd>
+    </dl>
+  </div>
+
+  <div class="source">
+    <h3>來源二｜人類學碩士論文（2024 年）</h3>
+    <dl>
+      <dt>論文資訊</dt><dd>鄧教東（2024）。《實踐中的張力：一個宜蘭縣泰雅族民族實驗中學的研究》。國立臺灣大學文學院人類學系碩士論文，指導教授王梅霞。</dd>
+      <dt>資料性質</dt><dd>已完成口試並公開發表之碩士學位論文，具數位物件識別碼（DOI），收錄於國立臺灣大學博碩士論文系統</dd>
+      <dt>田野期間</dt><dd>2023 年 7 月初訪，2023 年 9 月至 2024 年 6 月進行正式田野調查，涵蓋 112 學年度完整一學年</dd>
+      <dt>研究方法</dt><dd>參與觀察與非正式訪談；選定本校為田野地點前先取得校長同意，並以教務主任為聯繫窗口</dd>
+      <dt>參與範圍</dt><dd>以七年級「燒墾生活」課程為主，兼及教學發展會議、教師研習、播種祭、守月期間課程及畢業生尋根之旅</dd>
+      <dt>研究限制</dt><dd>因未取得未成年學生監護人同意，未訪談在學學生，僅訪談一位已成年之第一屆畢業生；作者自陳族語理解有限，部分文化意象須仰賴文化教師轉譯</dd>
+      <dt>取閱方式</dt><dd><a href="https://doi.org/10.6342/NTU202402079" target="_blank" rel="noopener">https://doi.org/10.6342/NTU202402079 ↗</a></dd>
+    </dl>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">二</span>觀課與訪談發現</h2>
+  <p class="lede">來源一之發現共 12 項，分為課堂觀察、教師訪談、學生活動三類。每項發現後標註其所對應之評鑑指標。</p>
+
+  <div class="filters">
+    <span>依指標篩選（同時套用於第二、三節）</span>
+    <div class="chips" id="chips"></div>
+    <p class="count" id="count"></p>
+  </div>
+
+  <div id="list">
+
+    <article class="find t-obs" data-ind="1-1,3-1">
+      <p class="kicker">課堂觀察　發現 1</p>
+      <h3>文化課並非只是技能的培養，而是身體經驗帶來的理解</h3>
+      <ul>
+        <li>割取苧麻：透過勞動了解傳統織布之繁瑣，從辛勞轉化為對作物與成品的珍視（對應感恩、愛土地）</li>
+        <li>設置陷阱：透過實際進入山林了解獵物取得不易，從辛勞轉化為對獵物的敬畏與感恩（對應感恩、愛土地）</li>
+        <li>工寮搭建：透過合作了解分工的重要，從個體投入轉化為對共同目標的努力（對應負責、合作）</li>
+      </ul>
+      <div class="tags"><span class="tag"><b>1-1</b> 民族教育理念之落實</span><span class="tag"><b>3-1</b> 課程教學與落實</span></div>
+    </article>
+
+    <article class="find t-obs" data-ind="3-1">
+      <p class="kicker">課堂觀察　發現 2</p>
+      <h3>呈現「教師示範 → 學生觀察 → 學生逐步獨自操作」的學習模式</h3>
+      <ul>
+        <li>陷阱設置、工寮搭建、全校共同預備等單元均可見此模式</li>
+        <li>由長輩或教師先行操作、學生於一旁觀察，熟悉後便會自然地介入與補位</li>
+      </ul>
+      <div class="tags"><span class="tag"><b>3-1</b> 課程教學與落實</span></div>
+    </article>
+
+    <article class="find t-obs" data-ind="3-1,3-2">
+      <p class="kicker">課堂觀察　發現 3</p>
+      <h3>文化課展現強烈的「任務驅動」特性</h3>
+      <ul>
+        <li>學生的行動節奏多由工作本身決定，而非教師指令</li>
+        <li>以「做中學」為課程主要操作模式</li>
+        <li>任務開始後學生即會自主調整位置與角色、掌握工作節奏</li>
+      </ul>
+      <div class="tags"><span class="tag"><b>3-1</b> 課程教學與落實</span><span class="tag"><b>3-2</b> 多元學習與適性</span></div>
+    </article>
+
+    <article class="find t-obs" data-ind="3-2,6-1">
+      <p class="kicker">課堂觀察　發現 4</p>
+      <h3>跨年級的分工與領導關係，高年級扮演重要示範角色</h3>
+      <ul>
+        <li>於全校共同預備 magu byaling 的肢解獵物、釀酒與醃肉過程中，打散後的混齡小組會自動形成工作流程</li>
+        <li>九年級學生不需教師指派，便會主動成為指引、提醒與示範的角色</li>
+        <li>七、八年級透過觀察學長姊的動作，找到自己能承擔的任務</li>
+        <li>高年級表現出對自身角色的自我期待</li>
+      </ul>
+      <div class="tags"><span class="tag"><b>3-2</b> 多元學習與適性</span><span class="tag"><b>6-1</b> 部落互動與家長參與</span></div>
+    </article>
+
+    <article class="find t-interview" data-ind="1-1,3-1">
+      <p class="kicker">教師訪談　發現 1</p>
+      <h3>教師觀點：技藝只是媒介，精神才是核心</h3>
+      <ul>
+        <li>學習技藝不是為了產出成果，而是讓學生更理解傳統智慧、族群精神與生活態度</li>
+        <li>以真實任務引導情意轉化，而非知識灌輸</li>
+        <li>歲時祭儀融入課程架構，研究者形容其「好比文化課的骨架」，將學生的生活經驗與文化緊密串連</li>
+      </ul>
+      <div class="tags"><span class="tag"><b>1-1</b> 民族教育理念之落實</span><span class="tag"><b>3-1</b> 課程教學與落實</span></div>
+    </article>
+
+    <article class="find t-interview" data-ind="1-1">
+      <p class="kicker">教師訪談　發現 2</p>
+      <h3>gaga 四項特質係透過情境與機會教育自然融入課程</h3>
+      <ul>
+        <li>「Tayal balay 真正的泰雅人」所應具備的特質，即是自 gaga 解析出的愛土地、負責、合作、感恩四項</li>
+        <li>四項特質由學校教師共同討論訂定，於生活各面向展現與實踐</li>
+        <li>研究者指出，四項特質並非作為顯性課程目標教授，而是學生透過真實任務感受、自然內化</li>
+      </ul>
+      <div class="tags"><span class="tag"><b>1-1</b> 民族教育理念之落實</span></div>
+    </article>
+
+    <article class="find t-interview" data-ind="3-4">
+      <p class="kicker">教師訪談　發現 3</p>
+      <h3>教師觀點：認同是動態的歷程，學生間差異極大</h3>
+      <ul>
+        <li>文化認同常因家庭背景與生活經驗不同而有落差</li>
+        <li>認同程度常隨年級上升而增強</li>
+        <li>能否將學習歷程的收穫內化為認同，仍為學生個人的自主選擇</li>
+        <li>學生願意在課外時間持續投入與練習，多半即意味著他已在其中看見意義（如文化青年團之參與）</li>
+      </ul>
+      <div class="tags"><span class="tag"><b>3-4</b> 學生民族文化認知與認同</span></div>
+    </article>
+
+    <article class="find t-interview" data-ind="6-3">
+      <p class="kicker">教師訪談　發現 4</p>
+      <h3>研究者記錄之教學困境</h3>
+      <ul>
+        <li>文化智慧來自生命史，但耆老與長輩入班的難度逐漸增加</li>
+        <li>缺乏族語語言環境，難以真正落實以族語教學</li>
+        <li>傳統性別分工與共學之間需取得平衡：兼顧平等與傳承，同時傳遞背後意涵</li>
+        <li>學生專注力及學習能力的變化為現場需面對之課題</li>
+      </ul>
+      <div class="tags"><span class="tag"><b>6-3</b> 民族教育之創新與省思</span></div>
+    </article>
+
+    <article class="find t-student" data-ind="3-4">
+      <p class="kicker">學生活動　發現 1</p>
+      <h3>文化課是學生認識自身文化的重要途徑</h3>
+      <ul>
+        <li>學生將文化課視為認識族群歷史、傳統生活與文化知識的重要來源</li>
+        <li>部分文化知識需要透過學校課程才能被學生有意識地認識</li>
+        <li>研究者據此指出，文化傳承未必僅依靠家庭或日常生活自然發生</li>
+      </ul>
+      <blockquote>
+        <p>「不會知道我們是從哪個地方遷徙而來的。」</p>
+        <p>「不會知道以前 Tayal 的一些生活技術、知道祖先是怎麼生活的。」</p>
+        <p class="attrib">學生對「如果這三年完全沒有文化課」之回應</p>
+      </blockquote>
+      <div class="tags"><span class="tag"><b>3-4</b> 學生民族文化認知與認同</span></div>
+    </article>
+
+    <article class="find t-student" data-ind="3-4">
+      <p class="kicker">學生活動　發現 2</p>
+      <h3>學生對文化課的價值判斷呈現實用性與文化性之間的落差</h3>
+      <ul>
+        <li>學生傾向以「未來是否實際使用」判斷部分學習內容，並與日常生活中是否有機會接觸相關</li>
+        <li>研究者同時指出，學習成果不僅停留於技能，學生能辨識文化課帶來的態度、知識與能力</li>
+      </ul>
+      <div class="split">
+        <div>
+          <h4>學生認為用得到</h4>
+          <ul>
+            <li>態度養成（耐心、專心、負責）</li>
+            <li>環境保育與永續觀念</li>
+            <li>植物的種類與特性</li>
+            <li>專題報告的方法</li>
+            <li>部分技能（釀酒、醃肉、放置陷阱）</li>
+          </ul>
+        </div>
+        <div>
+          <h4>學生認為較用不到</h4>
+          <ul>
+            <li>部分技能（織布、蓋家屋、放置陷阱）</li>
+          </ul>
+        </div>
+      </div>
+      <p class="attrib">同一項技能同時出現於兩側，反映學生間判斷之差異。</p>
+      <div class="tags"><span class="tag"><b>3-4</b> 學生民族文化認知與認同</span></div>
+    </article>
+
+    <article class="find t-student" data-ind="3-4">
+      <p class="kicker">學生活動　發現 3</p>
+      <h3>身分帶來認同與力量，同時伴隨外部眼光與環境適應的壓力</h3>
+      <ul>
+        <li>研究者指出原住民族身分對學生而言具有雙面性</li>
+        <li>身分能帶來文化學習的動力與族群驕傲</li>
+        <li>進入不同文化環境時，亦可能面對刻板印象、他人眼光與適應問題</li>
+        <li>環境轉變使學生更加意識到自身的原住民族身分與文化差異</li>
+      </ul>
+      <div class="tags"><span class="tag"><b>3-4</b> 學生民族文化認知與認同</span></div>
+    </article>
+
+    <article class="find t-student" data-ind="3-4,6-3">
+      <p class="kicker">學生活動　發現 4</p>
+      <h3>學生普遍對泰雅族文化具高度認同</h3>
+      <ul>
+        <li>參與活動之學生全數對族群身分表達驕傲、喜歡等正向感受</li>
+        <li>多數學生主動將「泰雅族」納入自我描述：於自我介紹的三個標籤中，9 位參與學生有 6 位寫下「#泰雅族」</li>
+        <li>多位學生認為認識自身文化與「身為原住民族」具有密切關聯，將文化學習視為身為族人的一種應然期待</li>
+        <li>研究者同時指出，「身為泰雅族的一員」與「文化傳承的責任」在學生心中尚未畫上等號</li>
+      </ul>
+      <blockquote>
+        <p>「會感覺自己身為原住民但不知道自己的傳統，很奇怪。」</p>
+        <p>「身為原住民有機會學習這些文化相關的知識很幸運，是其他人學不到的。」</p>
+        <p>「Tayal 如果不傳承，那就不用分原住民或非原住民了。」</p>
+        <p class="attrib">學生於認同主題討論中之分享</p>
+      </blockquote>
+      <div class="tags"><span class="tag"><b>3-4</b> 學生民族文化認知與認同</span><span class="tag"><b>6-3</b> 民族教育之創新與省思</span></div>
+    </article>
+
+    <p class="empty" data-list="list">（本節無符合所選指標之項目）</p>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">三</span>學術研究發現</h2>
+  <p class="lede">來源二之發現共 14 項，依論文章節順序排列。論文以「張力」為分析主軸，因此其發現同時包含對本校教育實踐的描述與對制度限制的分析；本節依原文如實摘錄，未作取捨。論文內文人物均為化名，本節沿用之。</p>
+
+  <div id="list2">
+
+    <article class="find t-thesis" data-ind="1-1">
+      <p class="kicker">論文發現 1　（第三章）</p>
+      <h3>畢業生尋根之旅中，學生自行指認四大特質的展現</h3>
+      <ul>
+        <li>本校每年為畢業生舉辦 Pinsbkan 尋根之旅，回溯宜蘭泰雅族遷徙路線至南投仁愛鄉瑞岩部落，由畢業生組成之青年團亦參與</li>
+        <li>研究者記錄晚會分享時，學生主動提出四項特質「都完全地在這個旅行中展現」</li>
+        <li>學生自行舉出之對應：自行搭建帳篷與分工（合作、負責）、自備餐具愛護環境（愛土地）、溯源認識族群故事並分享感謝彼此的陪伴（感恩）</li>
+        <li>此一對應係學生於活動現場自發提出，非課程教授之內容</li>
+      </ul>
+      <div class="tags"><span class="tag"><b>1-1</b> 民族教育理念之落實</span></div>
+    </article>
+
+    <article class="find t-thesis" data-ind="1-1,3-4">
+      <p class="kicker">論文發現 2　（第七章）</p>
+      <h3>第一屆畢業生於數年後的回溯：精神養成重於技能</h3>
+      <ul>
+        <li>研究者訪談一位已成年之第一屆民族實驗教育畢業生</li>
+        <li>該畢業生就讀期間，學校尚未將愛土地、負責、合作、感恩四項特質明列為欲培養之特質</li>
+        <li>其表示現在回頭看，在學校的三年教育確實感受到這四項特質的培育</li>
+        <li>就「感恩」而言，他於織作整經之前會進行個人祈福儀式，感謝祖靈庇佑</li>
+        <li>就「愛土地」而言，他提出族語中沒有「自然災害」一詞——對過去的人而言那本是自然的一部分，是站在以人為中心的角度才會視之為災害</li>
+        <li>他並表示文化課程所教的技能對他而言相對次要，三年的精神性養成在日後生活中更為重要</li>
+      </ul>
+      <div class="tags"><span class="tag"><b>1-1</b> 民族教育理念之落實</span><span class="tag"><b>3-4</b> 學生民族文化認知與認同</span></div>
+    </article>
+
+    <article class="find t-thesis" data-ind="2-3,6-1">
+      <p class="kicker">論文發現 3　（第三章）</p>
+      <h3>跨部落的耆老師資網絡，且刻意不予固定化</h3>
+      <ul>
+        <li>研究者記錄本校各項傳統技藝課程之外聘耆老分屬不同部落：小米酒與小米醃肉曾邀崙埤部落耆老、近年改邀四季部落耆老；地機織布曾邀南澳鄉耆老，桌機織布邀大同鄉耆老，製線邀南山或四季部落耆老；藤編邀樂水部落耆老，學校舉行儀式亦請該耆老主持祈福；木器製作曾邀南山部落耆老，近年邀南澳鄉武塔村耆老，該耆老與其父均為文化資產保存者；狩獵邀茂安部落耆老；漁獵邀寒溪部落教會牧師；口簧琴邀四季長老教會牧師</li>
+        <li>論文指出學校並無將傳統技藝師資固定化之傾向，係為使不同部落的手藝均能流傳</li>
+        <li>邀請範圍超出蘭陽溪上游地域，甚至跨出大同鄉至南澳地區</li>
+      </ul>
+      <div class="tags"><span class="tag"><b>2-3</b> 師資結構與教學增能</span><span class="tag"><b>6-1</b> 部落互動與家長參與</span></div>
+    </article>
+
+    <article class="find t-thesis" data-ind="2-3">
+      <p class="kicker">論文發現 4　（第六章）</p>
+      <h3>非原住民籍教師的實質參與，以及族群邊界在教育實踐中的跨越</h3>
+      <ul>
+        <li>論文指出本校轉型前之校本課程時期，泰雅文化相關課程即由非原住民籍教師統籌辦理，並親自入部落邀請耆老授課</li>
+        <li>轉型後雖因設置專職文化教師而退居支援角色，研究者仍記錄其持續入班觀察與協助、參與文化領域教學發展會議</li>
+        <li>亦有協同教學之例：七年級完成小米醃肉後，由國文教師帶領學生進行感官寫作</li>
+        <li>研究者記錄播種祭後之集會中，一位教師詢問學生：投入課程並實踐泰雅精神的非原住民籍主任是否為 tayal？學生思索後認為其具有 tayal 的精神，即為 tayal</li>
+        <li>論文據此指出，本校之族群身份界定並非僅以血緣為據，而是在社會互動與日常實踐中形塑</li>
+      </ul>
+      <p class="srcnote">※ 該研究田野期間為 112 學年度，師資統計基礎與本站指標 2-3 頁面不同，兩者數字不宜直接對照。</p>
+      <div class="tags"><span class="tag"><b>2-3</b> 師資結構與教學增能</span></div>
+    </article>
+
+    <article class="find t-thesis" data-ind="3-1">
+      <p class="kicker">論文發現 5　（第五章）</p>
+      <h3>一般課程之時程配合文化課程調整</h3>
+      <ul>
+        <li>論文指出本校以泰雅傳統文化為主體開展校園生活，如小米播種、播種祭、守月期等歲時</li>
+        <li>課程時程會配合外聘耆老之教學時間、配合需長時段一氣呵成之課程，以及配合傳統祭儀而調課</li>
+        <li>研究者的結論是：一般課程的時程規劃很大程度上是配合文化課程調整，而非相反</li>
+        <li>本校每週實驗教育課程為 10 節，含 9 節泰雅文化課程與 1 節族語課程</li>
+      </ul>
+      <div class="tags"><span class="tag"><b>3-1</b> 課程教學與落實</span></div>
+    </article>
+
+    <article class="find t-thesis" data-ind="3-1">
+      <p class="kicker">論文發現 6　（第三章）</p>
+      <h3>教學發展會議中對教案地方脈絡之檢核</h3>
+      <ul>
+        <li>研究者記錄一次教學發展會議：某教案詳列傳統婚姻相關介紹，其他教師指出該內容可能屬其他地區泰雅族之文化實踐，蘭陽溪上游並未見類似做法</li>
+        <li>與會教師認為教授時應做清楚區別，並說明本地的文化實作</li>
+        <li>論文以此說明本校在「泰雅族」此一範疇之下，仍會回到地方脈絡進行論述與教學</li>
+      </ul>
+      <div class="tags"><span class="tag"><b>3-1</b> 課程教學與落實</span></div>
+    </article>
+
+    <article class="find t-thesis" data-ind="3-4">
+      <p class="kicker">論文發現 7　（第四章）</p>
+      <h3>一位畢業生的織布歷程：從課程起點到日常生命實踐</h3>
+      <ul>
+        <li>本校文化課程為該畢業生開始織布的起點</li>
+        <li>畢業後持續向部落耆老學習織布，起初曾遭遇部落內部關於性別禁忌的質疑</li>
+        <li>當其持續投入並做出成果後，質疑的聲音逐漸消失</li>
+        <li>其自述織布最初被賦予尋根的意義，後來已不再是一項技藝，而是遇到事情或有情緒時，面對並調節生命的一種日常實踐</li>
+      </ul>
+      <div class="tags"><span class="tag"><b>3-4</b> 學生民族文化認知與認同</span></div>
+    </article>
+
+    <article class="find t-thesis" data-ind="6-1">
+      <p class="kicker">論文發現 8　（第五章）</p>
+      <h3>穀倉興建過程中的部落主體性</h3>
+      <ul>
+        <li>舊穀倉老舊需拆除重建，學校委託部落族人到校協助興建，並依傳統舉行建屋儀式</li>
+        <li>學校希望先確定儀式當天的時間、人數與準備物品等細節</li>
+        <li>研究者記錄族人並未完全回應學校提出的所有細節，而希望學校不必過問太多、放心讓他們完成</li>
+        <li>論文以此說明文化實作與學校行政慣習之間存在不同的運作邏輯</li>
+      </ul>
+      <div class="tags"><span class="tag"><b>6-1</b> 部落互動與家長參與</span></div>
+    </article>
+
+    <article class="find t-thesis" data-ind="6-3">
+      <p class="kicker">論文發現 9　（第六章）</p>
+      <h3>文化教師的制度性困境</h3>
+      <ul>
+        <li>論文記錄本校三位文化教師均為代理教師，其中僅一位持有中等教育教師證，且其專長科目為體育</li>
+        <li>由於現行教育體制中並無對應「文化」之一般教育學習科目，文化教師無法以正式教師方式聘任；即便欲進修取得師資培育資格，亦找不到對應之師資科目</li>
+        <li>代理教師之得聘員額可能因學生人數而調整，職涯穩定性受限</li>
+        <li>論文的結論是：民族實驗教育體制並非為原住民族教育之需求所設計，其與國家既有制度之間仍存在結構性張力</li>
+      </ul>
+      <div class="tags"><span class="tag"><b>6-3</b> 民族教育之創新與省思</span></div>
+    </article>
+
+    <article class="find t-thesis" data-ind="6-3,3-1">
+      <p class="kicker">論文發現 10　（第三章）</p>
+      <h3>傳統建材取得受法規限制，教學材料須外購</h3>
+      <ul>
+        <li>《森林法》第 15 條於 2004 年即修訂容許原住民族依生活慣俗採取森林產物，惟相關管理規則遲至 2019 年始頒布，且森林主產物仍須申請核准</li>
+        <li>論文指出本校興建傳統建築所需建材均以購買方式取得</li>
+        <li>教學過程材料耗損量大，部分教材亦使用進口材料，如產自越南的藤</li>
+        <li>研究者的觀察是：一所帶領學生認識並使用周遭自然資源的學校，在法規限制下卻只能以進口材料進行教學，顯示文化復振工程中仍存在斷裂</li>
+      </ul>
+      <div class="tags"><span class="tag"><b>6-3</b> 民族教育之創新與省思</span><span class="tag"><b>3-1</b> 課程教學與落實</span></div>
+    </article>
+
+    <article class="find t-thesis" data-ind="6-3">
+      <p class="kicker">論文發現 11　（第五章）</p>
+      <h3>文化轉化為課程時的標準化張力</h3>
+      <ul>
+        <li>研究者記錄一次文化領域教學研究會：某教案將泰雅族傳統社會組織拆分為數個部分並對應教學時數，其他教師擔憂環環相扣的文化體系被拆解為孤立的知識點</li>
+        <li>建屋課程中，學生對柱洞深度的認知出現「60 公分」「80 公分」「一隻手臂長」等複數版本；一般學科教師追問確切數字，耆老則回答大概就好，最後由耆老補強調整，樑柱順利立起</li>
+        <li>論文亦指出本校較少有祭儀課程，原因包括能主持祭儀的耆老已相當稀少，且祭儀之準備與進行無法事前排定時程</li>
+        <li>論文據此提出的課題是：複雜而具彈性的文化，如何適切地轉化為標準化的現代課程</li>
+      </ul>
+      <div class="tags"><span class="tag"><b>6-3</b> 民族教育之創新與省思</span></div>
+    </article>
+
+    <article class="find t-thesis" data-ind="3-1,6-3">
+      <p class="kicker">論文發現 12　（第四章）</p>
+      <h3>性別實作的不對稱，以及學校持續進行的協商</h3>
+      <ul>
+        <li>本校基於教育機會均等之立場，平時文化課程不分性別，所有學生均學習耕種、編織、狩獵、建屋等內容；守月期間則依傳統進行性別化的課程安排</li>
+        <li>論文指出織布與狩獵之開放程度並不對稱：男學生學習織布較受鼓勵，女學生則不被鼓勵深耕狩獵</li>
+        <li>九年級狩獵課程中，女學生多被分配除草、支援與小型陷阱，男學生則負責獵寮搭建、生火與大型陷阱之放置</li>
+        <li>研究者同時記錄主任與文化教師持續與該耆老溝通，希望調整分組使女學生亦有機會學習大型陷阱；並記錄該耆老已由最初完全不教女學生，放寬至教授女學生放置小型陷阱</li>
+        <li>論文另記一事：近幾年捕獲獵物的陷阱多由女學生所放置</li>
+      </ul>
+      <div class="tags"><span class="tag"><b>3-1</b> 課程教學與落實</span><span class="tag"><b>6-3</b> 民族教育之創新與省思</span></div>
+    </article>
+
+    <article class="find t-thesis" data-ind="6-1,6-3">
+      <p class="kicker">論文發現 13　（第五章）</p>
+      <h3>家長與學校對「教育」的不同理解，及其地理成因</h3>
+      <ul>
+        <li>研究者記錄部分家長質疑學生學習這些內容日後能有何用</li>
+        <li>受訪教師以族語回應此一質疑：族語會區別「你很會編織」與「你很有編織的 gaga」，後者意指清楚有哪些禁忌與規範須遵守、也理解這項技藝對自己生命的內涵，並在從事這件事時與自己的社會相互連結</li>
+        <li>該教師並表示，讓家長知道學校在做什麼、所教的東西有其價值，是學校仍須努力之處</li>
+        <li>論文指出本校校址不在部落之中、師生均需通勤，此一條件使教學狀態相對穩定（研究者曾訪談縣內另一所位於部落中的泰雅族實驗教育學校，該校因部落內不同教派對 utux 信仰詮釋不同，教授相關主題時遭遇困難），但同時也造成家長對學校事務較為陌生</li>
+      </ul>
+      <div class="tags"><span class="tag"><b>6-1</b> 部落互動與家長參與</span><span class="tag"><b>6-3</b> 民族教育之創新與省思</span></div>
+    </article>
+
+    <article class="find t-thesis" data-ind="2-2">
+      <p class="kicker">論文發現 14　（第七章）</p>
+      <h3>學區學生下山就讀情形</h3>
+      <ul>
+        <li>論文於研究限制一節指出，本校雖已轉型為民族實驗教育體制，惟周遭部落學生選擇下山就讀之人數卻逐漸增加，而非選擇作為鄰近學區學校的本校</li>
+        <li>研究者推測家長對「教育」或「原住民族教育」各有其理解方式，並因而影響其教育選擇，並建議後續研究應理解部落中不同行動者、尤其是家長對原住民族教育的想像與詮釋</li>
+        <li>本校將此一觀察如實列出，相關招生與學區宣導作為另見指標 2-2</li>
+      </ul>
+      <div class="tags"><span class="tag"><b>2-2</b> 學生入學與就學情形</span></div>
+    </article>
+
+    <p class="empty" data-list="list2">（本節無符合所選指標之項目）</p>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">四</span>研究者指出之限制</h2>
+  <p class="lede">以下為兩位研究者於各自報告中主動說明的限制。本校認為一併呈現較能反映這些外部觀察的真實份量，亦與指標 6-3 省思五所述之制度性限制相互對照。</p>
+
+  <article class="find" style="border-top-color:var(--grey)">
+    <h3>關於來源一（觀課與訪談報告）</h3>
+    <ul>
+      <li>單一學期內四場觀課，難以完整回答研究者原先設定的探究問題</li>
+      <li>文化課單元具延續性，分開觀課使脈絡有所斷裂</li>
+      <li>操作型課程難以即時記錄，多仰賴照片與事後回顧書寫</li>
+      <li>研究者身為外來觀察者，對部分抽象文化概念之理解需要更長時間累積</li>
+    </ul>
+  </article>
+
+  <article class="find" style="border-top-color:var(--grey)">
+    <h3>關於文化認同之推論</h3>
+    <ul>
+      <li>研究者明確指出：文化課是否有效促進文化認同，無法僅從本次活動得知</li>
+      <li>本頁「學生活動　發現 4」所呈現者為學生當下之自我表述，非認同成效之因果證據</li>
+    </ul>
+  </article>
+
+  <article class="find" style="border-top-color:var(--grey)">
+    <h3>關於來源二（碩士論文）</h3>
+    <ul>
+      <li>因未取得未成年學生監護人同意，研究者未訪談在學學生，僅訪談一位已成年之第一屆畢業生；研究者於論文中自陳此為一大遺憾</li>
+      <li>研究者自陳族語理解有限，部分泰雅族社會意象須仰賴文化教師轉譯</li>
+      <li>研究者建議後續應實際進入部落訪查族人日常生活經驗，以釐清文化教育如何自日常經驗轉譯，以及哪些內容在轉譯過程中被教育制度所揀選</li>
+      <li>該研究之田野期間為 112 學年度，所載師資結構、課程安排等情形係該期間之狀況，與本站其他頁面之統計基礎及時點均不相同</li>
+      <li>論文以「張力」為分析主軸，其目的在於理解教育實作中的多重力量，並非評價本校之辦學成效；研究者於論文中亦明確表示無意以量化指標評斷學校</li>
+    </ul>
+  </article>
+
+  <article class="find" style="border-top-color:var(--grey)">
+    <h3>與本校自我省思之對照</h3>
+    <ul>
+      <li>來源一記錄的「耆老入班難度增加」「缺乏族語語言環境」，與本校於指標 6-3 省思五自陳之制度性限制一致</li>
+      <li>來源二則以整章篇幅論證文化教師無法取得制度性保障、民族實驗教育體制並非為原住民族教育需求所設計，與同一項省思所指之方向相同</li>
+      <li>該項省思指出，長期支撐課程運作的是人而非制度；兩份外部觀察均在未與本校討論的情況下得到相近結論</li>
+    </ul>
+  </article>
+</section>
+
+<section>
+  <h2><span class="num">五</span>資料說明</h2>
+  <div class="notes">
+    <h3>引用與處理原則</h3>
+    <ul>
+      <li>來源一之內容經原作者同意後引用。</li>
+      <li>來源二為公開發表之學位論文，本頁依學術慣例節錄引用並註明出處，未重製全文；完整論文請循 DOI 取閱。論文內文人物均為化名，本頁沿用原文化名，未對應至本校實際教職員。</li>
+      <li>原報告中屬研究者個人學習歷程之自我檢討（如活動時間掌控、觀課安排等），與本校辦學情形無關，未納入本頁。</li>
+      <li>學生引述僅選錄與文化學習及族群認同直接相關者，並略去可能涉及個人處境或足資辨識特定學生之內容。原始引述均為匿名形式。</li>
+      <li>本頁為摘錄。來源一之兩份完整簡報列為佐證資料，檢視者如需查閱全文，得於現地評鑑時提供。</li>
+      <li>來源一之觀課與活動期間為 114 學年度，來源二之田野期間為 112 學年度；各自內容反映其調查期間之課程實施情形。</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    宜蘭縣立大同國民中學　115 學年度實驗教育評鑑　外部觀察與學術研究　｜　資料期間：112、114 學年度
+  </div>
+</footer>
+
+<script>
+(function(){
+  const cards=[...document.querySelectorAll('.find[data-ind]')];
+  const chips=document.getElementById('chips');
+  const count=document.getElementById('count');
+  const IND={'1-1':'民族教育理念之落實','2-2':'學生入學與就學情形','2-3':'師資結構與教學增能',
+             '3-1':'課程教學與落實','3-2':'多元學習與適性','3-4':'學生民族文化認知與認同',
+             '6-1':'部落互動與家長參與','6-3':'民族教育之創新與省思'};
+  let active=null;
+
+  function render(){
+    let n=0;
+    cards.forEach(c=>{
+      const on = !active || c.dataset.ind.split(',').includes(active);
+      c.style.display = on ? '' : 'none';
+      if(on) n++;
+    });
+    document.querySelectorAll('.empty').forEach(p=>{
+      const box=document.getElementById(p.dataset.list);
+      const any=[...box.querySelectorAll('.find[data-ind]')].some(c=>c.style.display!=='none');
+      p.style.display = any ? 'none' : 'block';
+    });
+    const a=cards.filter(c=>c.classList.contains('t-thesis')).length;
+    count.textContent = active
+      ? '指標 '+active+'（'+IND[active]+'）相關發現共 '+n+' 項，全部 '+cards.length+' 項。'
+      : '共 '+cards.length+' 項發現（觀課與訪談 '+(cards.length-a)+' 項、學術研究 '+a+' 項）。';
+  }
+
+  [{v:null,l:'全部'}].concat(Object.keys(IND).map(k=>({v:k,l:k}))).forEach(o=>{
+    const b=document.createElement('button');
+    b.className='chip'; b.type='button'; b.textContent=o.l;
+    b.title=o.v?IND[o.v]:'顯示全部發現';
+    b.setAttribute('aria-pressed', o.v===null?'true':'false');
+    b.addEventListener('click',()=>{
+      active=o.v;
+      chips.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed','false'));
+      b.setAttribute('aria-pressed','true');
+      render();
+    });
+    chips.appendChild(b);
+  });
+  render();
+})();
+</script>
+</body>
+</html>
